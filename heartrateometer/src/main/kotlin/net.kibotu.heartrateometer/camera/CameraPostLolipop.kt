@@ -1,4 +1,4 @@
-package de.charite.balsam.utils.camera
+package net.kibotu.heartrateometer.camera
 
 import android.annotation.SuppressLint
 import android.content.Context
@@ -28,7 +28,7 @@ class CameraPostLolipop internal constructor(context: Context) : CameraSupport()
             val cameraIds = manager.cameraIdList
             this.cameraIndex = cameraId
             this.cameraId = cameraIds[cameraId]
-            manager.openCamera(this.cameraId, object : CameraDevice.StateCallback() {
+            manager.openCamera(this.cameraId!!, object : CameraDevice.StateCallback() {
                 override fun onOpened(camera: CameraDevice) {
                     this@CameraPostLolipop.camera = camera
                 }
@@ -91,7 +91,7 @@ class CameraPostLolipop internal constructor(context: Context) : CameraSupport()
 
         try {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-                manager.setTorchMode(cameraId, enabled)
+                manager.setTorchMode(cameraId!!, enabled)
                 flashLightEnabled = enabled
             }
         } catch (e: CameraAccessException) {

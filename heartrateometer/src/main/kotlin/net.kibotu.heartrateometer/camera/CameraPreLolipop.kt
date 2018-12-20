@@ -1,4 +1,4 @@
-package de.charite.balsam.utils.camera
+package net.kibotu.heartrateometer.camera
 
 import android.hardware.Camera
 import android.view.SurfaceHolder

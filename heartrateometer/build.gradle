@@ -42,14 +42,14 @@ android {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
-    implementation 'com.android.support:appcompat-v7:27.0.2'
+    implementation 'com.android.support:appcompat-v7:28.0.0'
     testImplementation 'junit:junit:4.12'
-    androidTestImplementation 'com.android.support.test:runner:1.0.1'
-    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
 
-    provided "com.squareup.retrofit2:retrofit:$retrofit_version"
-    provided "com.squareup.retrofit2:adapter-rxjava2:$retrofit_version"
+    compileOnly "com.squareup.retrofit2:retrofit:$retrofit_version"
+    compileOnly "com.squareup.retrofit2:adapter-rxjava2:$retrofit_version"
 }
 
 apply from: 'https://gist.githubusercontent.com/kibotu/994c9cc65fe623b76b76fedfac74b34b/raw/65ee52482ba65050e015f4b00d8d2fc9172a10e8/javadoc.gradle'

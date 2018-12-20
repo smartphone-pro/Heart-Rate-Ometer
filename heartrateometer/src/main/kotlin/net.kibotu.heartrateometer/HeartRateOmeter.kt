@@ -10,14 +10,13 @@ import android.util.Log
 import android.view.SurfaceHolder
 import android.view.SurfaceView
 import android.view.WindowManager
-import de.charite.balsam.utils.camera.CameraModule
-import de.charite.balsam.utils.camera.CameraSupport
+import net.kibotu.heartrateometer.camera.CameraModule
+import net.kibotu.heartrateometer.camera.CameraSupport
 import io.reactivex.Observable
 import io.reactivex.subjects.PublishSubject
 import org.apache.commons.collections4.queue.CircularFifoQueue
 import java.lang.ref.WeakReference
 import java.util.concurrent.atomic.AtomicBoolean
-import kotlin.reflect.KFunction1
 
 
 /**
